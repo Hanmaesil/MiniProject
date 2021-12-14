@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Main {
+public class 사전테스트 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -111,74 +111,14 @@ public class Main {
 				System.out.println(month + "월");
 				System.out.println("===== 아침 =====");
 				System.out.println("선택지를 고르세요");
-				System.out.print("1. 10분 더자고 출근하기, 2. 씻고 출근하기 3. 밥먹고 출근하기 >>>>");
-				dayChoice = sc.nextInt();
-				if (dayChoice == 1) { // 10분 더자고 출근하기
-					if (per.select > 0 && per.select < 40) {
-						System.out.println("늦잠자다가 급하게 준비하느라 욕실에서 미끄러졌다!");
-						System.out.printf("욕실에서 미끄러져 체력 -%d!\n", per.healthStandard1); // 랜덤숫자 다시 뽑는방법 찾아보기
-						health -= per.healthStandard1;
-					} else if (per.select > 40 && per.select < 80) {
-						System.out.println("늦잠을 자고 출근했지만 전산오류로 정시출근이 되었다!");
-						System.out.printf("푹 자고 일어나서 체력 +%d!\n", per.healthStandard1);
-						health += per.healthStandard1;
-						if (per.select > 60 && per.select < 70) { // 이벤트
-							System.out.printf("추가로 저항력 +%d!!!\n", per.resistanceStandard1);
-							resistance += per.resistanceStandard1;
-						}
-					} else if (per.select > 80 && per.select < 120) {
-						System.out.println("지각하여 오전내내 상사에게 시달렸지만 정신승리하였다!");
-						System.out.printf("정신승리로 인한 저항력 +%d\n", per.resistanceStandard1);
-						resistance += per.resistanceStandard1;
+				NurseScript(health, resistance); //간호사 오전 스크립
 
-					}
-
-				} else if (dayChoice == 2) { // 씻고 출근하기
-					if (per.select > 0 && per.select < 40) {
-						System.out.println("욕실에서 신나게 노래 부르며 준비하다가 지각 하였다!");
-						System.out.printf("상사에게 혼나 체력 -%d!\n", per.healthStandard1); // 랜덤숫자 다시 뽑는방법 찾아보기
-						health -= per.healthStandard1;
-					} else if (per.select > 40 && per.select < 80) {
-						System.out.println("뽀드드드드드드득 소리가 날정도록 깨끗하게 씻었다!");
-						System.out.printf("깨끗하게 씻어서 저항력 +%d!\n", per.resistanceStandard1);
-						health += per.healthStandard1;
-						if (per.select > 60 && per.select < 70) { // 이벤트
-							System.out.printf("추가로 체력 +%d!!!\n", per.healthStandard1);
-							resistance += per.resistanceStandard1;
-						}
-					} else if (per.select > 80 && per.select < 120) {
-						System.out.println("부지런히 씻고 무사히 출근!");
-						System.out.printf("정시출근으로 체력 +%d\n", per.healthStandard1);
-						health += per.healthStandard1;
-
-					}
-
-				} else if (dayChoice == 3) { // 밥먹고 출근하기
-					if (per.select > 0 && per.select < 40) {
-						System.out.println("밥을 급하게 먹어 체해버렸다!");
-						System.out.printf("속이 답답해서 체력 -%d!\n", per.healthStandard1); // 랜덤숫자 다시 뽑는방법 찾아보기
-						health -= per.healthStandard1;
-					} else if (per.select > 40 && per.select < 80) {
-						System.out.println("아침엔 고기지!");
-						System.out.printf("속이 든든해서 체력 +%d!\n", per.healthStandard1);
-						health += per.healthStandard1;
-						if (per.select > 60 && per.select < 70) { // 이벤트
-							System.out.printf("추가로 저항력 +%d!!!\n", per.resistanceStandard1);
-							resistance += per.resistanceStandard1;
-						}
-					} else if (per.select > 80 && per.select < 120) {
-						System.out.println("밥을 든든히 먹은후엔 아이스 아메리카노지!");
-						System.out.printf("카페인 섭취로 인한 저항력 +%d\n", per.resistanceStandard1);
-						resistance += per.resistanceStandard1;
-
-					}
-
-				}
 			}
 			System.out.println("===== 점심 =====");
 			System.out.println("선택지를 고르세요");
 			System.out.print("1. 구내식당가기 2. 맛집 찾아가기 3. 짬내서 운동하기 >>>>");
 			dayChoice = sc.nextInt();
+			if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11 || month == 12) {
 			if (dayChoice == 1) { // 구내식당가기
 				if (per.select > 0 && per.select < 40) {
 					System.out.println("구내식당 공사로 인해 점심을 못 먹었다.");
@@ -246,11 +186,12 @@ public class Main {
 				}
 
 			}
-
+			}
 			System.out.println("===== 저녁 =====");
 			System.out.println("선택지를 고르세요");
 			System.out.print("1. 칼퇴하고 푹 쉬기! 2. 친구만나기 3. 운동가기 >>>>");
 			dayChoice = sc.nextInt();
+			if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11 || month == 12) {
 			if (dayChoice == 1) { // 칼퇴하고 푹쉬기
 				if (per.select > 0 && per.select < 40) {
 					System.out.println("운좋게 카풀로 집까지 편하게 갔다!");
@@ -317,7 +258,7 @@ public class Main {
 
 				}
 			}
-
+			}
 			status(choice, nurse, athlete, student, health, resistance);// 매턴 스탯을 보여준다.
 			check(per, choice, resistance); // 감염여부를 매턴 보여주는 메소드 //확률을 계산해서 코로나 감염 여부와 위험 정도 표시.
 
@@ -327,7 +268,7 @@ public class Main {
 
 		}
 	}
-
+	//코로나 감염여부 확인
 	private static void check(Percentage per, int choice, int resistance) {
 		int check = per.RePercentage(resistance, choice); // 코로나 감염여부 확인하기.
 		if (check == 0) {
@@ -353,4 +294,86 @@ public class Main {
 		}
 	}
 
+	
+	
+	public static void NurseScript(int health, int resistance) {
+		Nurse nu = new Nurse(); // 간호사 클래스
+		Athlete at = new Athlete(); // 운동선수 클래스
+		Student stu = new Student(); // 고등학생 클래스
+		Percentage per = new Percentage(); // 확률과 수치들 클래스
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("1. 10분 더자고 출근하기, 2. 씻고 출근하기 3. 밥먹고 출근하기 >>>>");
+		int dayChoice = sc.nextInt();
+		
+		if (dayChoice == 1) { // 10분 더자고 출근하기
+			if (per.select > 0 && per.select < 40) {
+				System.out.println("늦잠자다가 급하게 준비하느라 욕실에서 미끄러졌다!");
+				System.out.printf("욕실에서 미끄러져 체력 -%d!\n", per.healthStandard1); // 랜덤숫자 다시 뽑는방법 찾아보기
+				health -= per.healthStandard1;
+			} else if (per.select > 40 && per.select < 80) {
+				System.out.println("늦잠을 자고 출근했지만 전산오류로 정시출근이 되었다!");
+				System.out.printf("푹 자고 일어나서 체력 +%d!\n", per.healthStandard1);
+				health += per.healthStandard1;
+				if (per.select > 60 && per.select < 70) { // 이벤트
+					System.out.printf("추가로 저항력 +%d!!!\n", per.resistanceStandard1);
+					resistance += per.resistanceStandard1;
+				}
+			} else if (per.select > 80 && per.select < 120) {
+				System.out.println("지각하여 오전내내 상사에게 시달렸지만 정신승리하였다!");
+				System.out.printf("정신승리로 인한 저항력 +%d\n", per.resistanceStandard1);
+				resistance += per.resistanceStandard1;
+
+			}
+
+		} else if (dayChoice == 2) { // 씻고 출근하기
+			if (per.select > 0 && per.select < 40) {
+				System.out.println("욕실에서 신나게 노래 부르며 준비하다가 지각 하였다!");
+				System.out.printf("상사에게 혼나 체력 -%d!\n", per.healthStandard1); // 랜덤숫자 다시 뽑는방법 찾아보기
+				health -= per.healthStandard1;
+			} else if (per.select > 40 && per.select < 80) {
+				System.out.println("뽀드드드드드드득 소리가 날정도록 깨끗하게 씻었다!");
+				System.out.printf("깨끗하게 씻어서 저항력 +%d!\n", per.resistanceStandard1);
+				health += per.healthStandard1;
+				if (per.select > 60 && per.select < 70) { // 이벤트
+					System.out.printf("추가로 체력 +%d!!!\n", per.healthStandard1);
+					resistance += per.resistanceStandard1;
+				}
+			} else if (per.select > 80 && per.select < 120) {
+				System.out.println("부지런히 씻고 무사히 출근!");
+				System.out.printf("정시출근으로 체력 +%d\n", per.healthStandard1);
+				health += per.healthStandard1;
+
+			}
+
+		} else if (dayChoice == 3) { // 밥먹고 출근하기
+			if (per.select > 0 && per.select < 40) {
+				System.out.println("밥을 급하게 먹어 체해버렸다!");
+				System.out.printf("속이 답답해서 체력 -%d!\n", per.healthStandard1); // 랜덤숫자 다시 뽑는방법 찾아보기
+				health -= per.healthStandard1;
+			} else if (per.select > 40 && per.select < 80) {
+				System.out.println("아침엔 고기지!");
+				System.out.printf("속이 든든해서 체력 +%d!\n", per.healthStandard1);
+				health += per.healthStandard1;
+				if (per.select > 60 && per.select < 70) { // 이벤트
+					System.out.printf("추가로 저항력 +%d!!!\n", per.resistanceStandard1);
+					resistance += per.resistanceStandard1;
+				}
+			} else if (per.select > 80 && per.select < 120) {
+				System.out.println("밥을 든든히 먹은후엔 아이스 아메리카노지!");
+				System.out.printf("카페인 섭취로 인한 저항력 +%d\n", per.resistanceStandard1);
+				resistance += per.resistanceStandard1;
+
+			}
+
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }
