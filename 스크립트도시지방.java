@@ -1,9 +1,8 @@
-package minimini;
+
 
 import java.util.Random;
 
 public class 스크립트도시지방 {
-	//간호사랑 운동선수
 	Random ran = new Random();
 
 	
@@ -662,5 +661,382 @@ public class 스크립트도시지방 {
 			return select;
 		}
 	}
-
+	
+	//대학생 선택지
+	//아침
+	//1. 등교하기 2. 밥 먹고 등교하기 3. 아 몰라 1교시 안가!
+	//점심
+	//1. 학식먹기 2. 맛집탐방 3. 놀러가기
+	//저녁
+	//1. 술마시기 2. 클럽가기 3. 과제하기
+	
+	public int StudentMorning1(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("아 피곤해 ㅠ 휴강안하나?");
+				System.out.println("체력 "); //체력 감소
+				System.out.println("기분이 안좋아 면역력 "); // 면역력 감소
+			} else if (select == 1) {
+				System.out.println("좋아하는 여자애랑 같이 듣는 수업이다");
+				System.out.println("언능 가야지!");
+				System.out.println("기분이 좋아 면역력 "); //면역력 증가
+			} else if (select == 2) {
+				System.out.println("등교하려던 찰나 휴강문자가 날라왔다");
+				System.out.println("더 자야지~");
+				System.out.println("휴식! 체력 "); //체력 증가
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("원격수업 개꿀^^");
+				System.out.println("체력 "); //체력 증가
+				System.out.println("기분이 좋아 면역력 "); // 면역력 증가
+			} else if (select == 1) {
+				System.out.println("교수님이 무조건 현장강의만 한다했다");
+				System.out.println("자퇴하고 싶다..");
+				System.out.println("기분이 안 좋아 면역력 ");//면역력 감소
+			} else if (select == 2) {
+				System.out.println("등교하려던 찰나 휴강문자가 날라왔다");
+				System.out.println("더 자야지~");
+				System.out.println("휴식! 체력 "); //체력 증가
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	public int StudentMorning2(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("전날 배달시킨 찜닭이 상한 것 같다");
+				System.out.println("모르겠고 배고프니 일단 먹는다");
+				System.out.println("배탈이 났다.. 면역력 ");//면역력 감소
+			} else if (select == 1) {
+				System.out.println("아침은 든든하게 먹어야지~");
+				System.out.println("든든하게 먹었다 체력 ");//체력 증가
+			} else if (select == 2) {
+				System.out.println("아침을 먹으려고 한시간 일찍 일어났다");
+				System.out.println("잠을 잘 못잤더니 피곤하다");
+				System.out.println("체력 "); //체력 감소
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("전날 배달시킨 찜닭이 상한 것 같다");
+				System.out.println("모르겠고 배고프니 일단 먹는다");
+				System.out.println("배탈이 났다.. 면역력 ");//면역력 감소
+			} else if (select == 1) {
+				System.out.println("아침은 든든하게 먹어야지~");
+				System.out.println("든든하게 먹었다 체력 ");//체력 증가
+			} else if (select == 2) {
+				System.out.println("역시 원격수업 들으면서 먹는 밥이 꿀맛이지~");
+				System.out.println("든든하다 체력 "); //체력 증가
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	public int StudentMorning3(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("아 몰라~ 1교시 쿨하게 째고 더잤다");
+				System.out.println("너무개운한걸?");
+				System.out.println("체력 "); //체력 증가
+				System.out.println("면역력 ");//면역력 증가
+			} else if (select == 1) {
+				System.out.println("교수님이 화가나서 f를 줬다");
+				System.out.println("인생 망한 것 같다");
+				System.out.println("기분이 안좋아.. 면역력 ");//면역력 감소
+			} else if (select == 2) {
+				System.out.println("푹자고 일어났는데 휴강이었다고 카톡이 왔다");
+				System.out.println("마음이 편한해졌다");
+				System.out.println("체력 "); //체력 증가
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("아 몰라~ 1교시 쿨하게 째고 더잤다");
+				System.out.println("너무개운한걸?");
+				System.out.println("체력 "); //체력 증가
+				System.out.println("면역력 ");//면역력 증가
+			} else if (select == 1) {
+				System.out.println("교수님이 화가나서 f를 줬다");
+				System.out.println("인생 망한 것 같다");
+				System.out.println("기분이 안좋아.. 면역력 ");//면역력 감소
+			} else if (select == 2) {
+				System.out.println("원격수업 이지롱");
+				System.out.println("줌 켜고 꿀잠 잤다");
+				System.out.println("체력 "); // 체력 증가
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	public int StudentLaunch1(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("어제도 학식 오늘도 학식...");
+				System.out.println("그만 먹고 싶다 질려..");
+				System.out.println("기분이 안좋아 면역력 "); //면역력 감소
+			} else if (select == 1) {
+				System.out.println("학식에 치킨이 나왔다!");
+				System.out.println("이맛에 학식 먹지~");
+				System.out.println("남는시간에 쪽잠 체력 ");//체력 증가
+			} else if (select == 2) {
+				System.out.println("교내식당에서 확진자가 나왔다");
+				System.out.println("혹시.. 나도?");
+				System.out.println("면역력 ");// 면역력 감소
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("어제도 학식 오늘도 학식...");
+				System.out.println("그만 먹고 싶다 질려..");
+				System.out.println("기분이 안좋아 면역력 "); //면역력 감소
+			} else if (select == 1) {
+				System.out.println("학식에 치킨이 나왔다!");
+				System.out.println("이맛에 학식 먹지~");
+				System.out.println("남는시간에 쪽잠 체력 ");//체력 증가
+			} else if (select == 2) {
+				System.out.println("교내식당에서 확진자가 나왔다");
+				System.out.println("혹시.. 나도?");
+				System.out.println("면역력 ");// 면역력 감소
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	public int StudentLaunch2(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("인기절정 맛집을 찾아갔다");
+				System.out.println("사람이 꽉찼다");
+				System.out.println("감염 위험! 면역력 ");//면역력 감소
+			} else if (select == 1) {
+				System.out.println("파스타는 역시 이 맛이지~");
+				System.out.println("맛있는걸 먹고 기분이 좋아졌다 면역력 ");//면역력 증가
+			} else if (select == 2) {
+				System.out.println("열심히 걸어서 맛집을 찾아갔는데 문을 닫았다!");
+				System.out.println("지쳐 ㅠ 체력 ");//체력 감소
+				System.out.println("걷기운동! 면역력 ");//면역력 증가
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("인기절정 맛집을 찾아갔다");
+				System.out.println("사람이 꽉찼다");
+				System.out.println("감염 위험! 면역력 ");//면역력 감소
+			} else if (select == 1) {
+				System.out.println("거리두기 인데 사람많은 맛집을 가?");
+				System.out.println("감염 위험! 면역력 %d ");//면역력 감소
+			} else if (select == 2) {
+				System.out.println("열심히 걸어서 맛집을 찾아갔는데 문을 닫았다!");
+				System.out.println("지쳐 ㅠ 체력 ");//체력 감소
+				System.out.println("걷기운동! 면역력 ");//면역력 증가
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	public int StudentLaunch3(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("코인노래방가서 노래실력을 뽐냈다");
+				// 절절한 옛날 발라드 브금
+				System.out.println("이유는 모르지만 체력 ");//체력 증가
+				System.out.println("감염 위험! 면역력 %d 감소");//면역력 감소
+			} else if (select == 1) {
+				System.out.println("pc방에서 친구들과 게임을 했다");
+				System.out.println("역시 롤은 질병게임이다");
+				System.out.println("체력 "); //체력 감소
+				System.out.println("기분이 안좋아 면역력 "); //면역력 감소
+			} else if (select == 2) {
+				System.out.println("공원에서 좋아하는 여자애랑 산책했다");
+				System.out.println("체력 "); //체력 상승
+				System.out.println("면역력 "); //면역력 상승
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("코인노래방가서 노래실력을 뽐냈다");
+				// 절절한 옛날 발라드 브금
+				System.out.println("이유는 모르지만 체력 ");//체력 증가
+				System.out.println("감염 위험! 면역력 %d 감소");//면역력 감소
+			} else if (select == 1) {
+				System.out.println("pc방에서 친구들과 게임을 했다");
+				System.out.println("역시 롤은 질병게임이다");
+				System.out.println("체력 "); //체력 감소
+				System.out.println("기분이 안좋아 면역력 "); //면역력 감소
+			} else if (select == 2) {
+				System.out.println("원격수업인데 어딜 나가?");
+				System.out.println("집에서 유튜브나 보자");
+				System.out.println("면역력 "); //면역력 상승
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	public int StudentNight1(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("술은 역시 소주지 마셔마셔~");
+				System.out.println("그날 밤.. 기억이 없다");
+				System.out.println("체력 "); //체력 감소
+				System.out.println("소주로 소독했다! 면역력 "); //면역력 증가
+			} else if (select == 1) {
+				System.out.println("오늘은 간단히 맥주만 마실까?");
+				System.out.println("친구랑 기분좋게 맥주한잔 했다");
+				System.out.println("집가서 꿀잠 체력 "); //체력 증가
+				System.out.println("감염 위험! 면역력 "); //면역력 감소
+			} else if (select == 2) {
+				System.out.println("술마시러 갔는데 가게가 문을 닫았다");
+				System.out.println("그냥 집이나 가자..");
+				System.out.println("체력, 면역력 변함이 없다.");
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("술은 역시 소주지 마셔마셔~");
+				System.out.println("그날 밤.. 기억이 없다");
+				System.out.println("체력 "); //체력 감소
+				System.out.println("소주로 소독했다! 면역력 "); //면역력 증가
+			} else if (select == 1) {
+				System.out.println("거리두기 - 술집 영업제한 술마시다가 쫒겨났다?");
+				System.out.println("아쉬워ㅠㅠ");
+				System.out.println("기분이 안 좋아 면역력 "); //면역력 감소
+			} else if (select == 2) {
+				System.out.println("술마시러 갔는데 가게가 문을 닫았다");
+				System.out.println("그냥 집이나 가자..");
+				System.out.println("체력, 면역력 변함이 없다.");
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	public int StudentNight2(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("둠칫~ 둠칫~ 신나게 놀았다");
+				System.out.println("기분이좋아 체력 "); //체력 증가
+				System.out.println("감염 위험! 면역력 ");//면역력 감소
+			} else if (select == 1) {
+				System.out.println("클럽갔는데 입구에서 막혔다...");
+				System.out.println("혼자있고 싶어..");
+				System.out.println("체력 "); //체력 감소
+				System.out.println("기분이 안좋아.. 면역력 소");//면역력 감소
+			} else if (select == 2) {
+				System.out.println("클럽 가기 귀찮은걸?");
+				System.out.println("집이나 가자~");
+				System.out.println("집에서 쉬었다 면역력 "); //면역력 증가
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("거리두기인데 어딜 가?");
+				System.out.println("곱게 집을 갔다");
+				System.out.println("체력 면역력 변동 없다.");
+			} else if (select == 1) {
+				System.out.println("클럽갔는데 입구에서 막혔다...");
+				System.out.println("혼자있고 싶어..");
+				System.out.println("체력 "); //체력 감소
+				System.out.println("기분이 안좋아.. 면역력 소");//면역력 감소
+			} else if (select == 2) {
+				System.out.println("거리두기라 클럽이 문을 안연다");
+				System.out.println("집이나 가자~");
+				System.out.println("집에서 쉬었다 면역력 "); //면역력 증가
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	public int StudentNight3(int month) {
+		int select = ran.nextInt(3);
+		
+		if (month == 1 || month == 2 || month == 4 || month == 5 || month == 7 || month == 8 || month == 11) {
+			
+			if (select == 0) {
+				System.out.println("과제하느라 밤샜다..");
+				System.out.println("체력 "); //체력 감소
+			} else if (select == 1) {
+				System.out.println("과제 해야지..zzZZ~");
+				System.out.println("과제 하다가 잠 들었다 망했다.");
+				System.out.println("체력 "); //체력 증가
+				System.out.println("면역력 ");//면역력 증가
+			} else if (select == 2) {
+				System.out.println("좋아하는 여자애가 과제 대신 해달라고 했다");
+				System.out.println("과제 2개 하느라 밤샜다");
+				System.out.print("헤헤.. 그래도 행복해...");
+				System.out.println("체력  ");//체력 감소
+			}
+			return select;
+		}else if (month == 3 || month == 6 || month == 9) {
+			if (select == 0) {
+				System.out.println("과제하느라 밤샜다..");
+				System.out.println("체력 "); //체력 감소
+			} else if (select == 1) {
+				System.out.println("과제 해야지..zzZZ~");
+				System.out.println("과제 하다가 잠 들었다 망했다.");
+				System.out.println("체력 "); //체력 증가
+				System.out.println("면역력 ");//면역력 증가
+			} else if (select == 2) {
+				System.out.println("좋아하는 여자애가 과제 대신 해달라고 했다");
+				System.out.println("과제 2개 하느라 밤샜다");
+				System.out.print("헤헤.. 그래도 행복해...");
+				System.out.println("체력  ");//체력 감소
+			}
+			return select;
+		}else {
+			return select;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+	
